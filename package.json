@@ -4,6 +4,10 @@
 	"description": "Open .html with Vite Server",
 	"version": "0.0.1",
 	"publisher": "rui-ge-24601",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ruige24601/vscode-plugin-vite.git"
+	},
 	"engines": {
 		"vscode": "^1.41.0"
 	},
