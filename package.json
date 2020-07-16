@@ -1,73 +1,74 @@
 {
-	"name": "Vite",
-	"displayName": "Vite",
-	"description": "Open .html with Vite Server",
-	"version": "0.0.1",
-	"publisher": "rui-ge-24601",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ruige24601/vscode-plugin-vite.git"
-	},
-	"engines": {
-		"vscode": "^1.41.0"
-	},
-	"keywords": [
-		"server",
-		"vue",
-		"html",
-		"js",
-		"ts",
-		"vite"
-	],
-	"icon": "icon.png",
-	"main": "./src/extension.js",
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"*"
-	],
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.vite.viteLaunch",
-				"title": "Open with Vite Server"
-			}
-		],
-		"menus": {
-			"editor/context": [
-				{
-					"when": "editorFocus && resourceLangId == html",
-					"command": "extension.vite.viteLaunch",
-					"group": "navigation"
-				}
-			],
-			"explorer/context": [
-				{
-					"when": "resourceLangId == html",
-					"command": "extension.vite.viteLaunch",
-					"group": "navigation"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.46.0",
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"glob": "^7.1.6",
-		"mocha": "^7.1.2",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
-	},
-	"dependencies": {
-		"vite": "^1.0.0-beta.11"
-	}
+  "name": "Vite",
+  "displayName": "Vite",
+  "description": "Open .html with Vite Server",
+  "version": "0.0.1",
+  "publisher": "rui-ge-24601",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruige24601/vscode-plugin-vite.git"
+  },
+  "engines": {
+    "vscode": "^1.41.0"
+  },
+  "keywords": [
+    "server",
+    "vue",
+    "html",
+    "js",
+    "ts",
+    "vite"
+  ],
+  "icon": "icon.png",
+  "main": "./src/extension.js",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.vite.viteLaunch",
+        "title": "Open with Vite Server"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus && resourceLangId == html",
+          "command": "extension.vite.viteLaunch",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceLangId == html",
+          "command": "extension.vite.viteLaunch",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.41.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "open": "^7.0.4",
+    "vite": "^1.0.0-beta.11"
+  }
 }
