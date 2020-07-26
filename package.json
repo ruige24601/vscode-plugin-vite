@@ -2,7 +2,7 @@
   "name": "Vite",
   "displayName": "Vite",
   "description": "Open .html with Vite Server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "RuiGe24601",
   "repository": {
     "type": "git",
@@ -37,14 +37,14 @@
     "menus": {
       "editor/context": [
         {
-          "when": "editorFocus && resourceLangId == html",
+          "when": "resourceLangId == html || resourceLangId == javascript || resourceLangId == vue",
           "command": "extension.vite.viteLaunch",
           "group": "navigation"
         }
       ],
       "explorer/context": [
         {
-          "when": "resourceLangId == html",
+          "when": "resourceLangId == html || resourceLangId == javascript || resourceLangId == vue",
           "command": "extension.vite.viteLaunch",
           "group": "navigation"
         }
