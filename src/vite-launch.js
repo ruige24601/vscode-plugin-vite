@@ -58,9 +58,9 @@ module.exports = function (context) {
         statusBarItem.command = "extension.vite.viteClose";
 
         if (relativePath.endsWith(".js") || relativePath.endsWith(".vue")) {
-          open(`http://localhost:${port}/index.html`);
+          open(`http://localhost:${userConfig.port}/index.html`);
         } else {
-          open(`http://localhost:${port}${relativePath}`);
+          open(`http://localhost:${userConfig.port}${relativePath}`);
         }
       }
     )
@@ -144,9 +144,13 @@ const myPlugin = (ctx) => {
       } else if (url == "/src/main.js") {
         const p = path.resolve(__dirname, "./main.js");
         let content = fs.readFileSync(p, "utf-8");
-        const newContent = content.replace("./App.vue", relativePath);
+        const newContent = content.replace(
+          "./App.vue",
+          "/" + relativePath.substr(1)
+        );
         context.type = "application/javascript";
         context.body = newContent;
+        return;
       }
       next();
     });
